@@ -1,0 +1,47 @@
+<div class="mission-form">
+    <h5>Create Mission</h5>
+    <mat-form-field>
+        <mat-label>Mission Name</mat-label>
+        <input matInput [(ngModel)]="mission.mission_name" placeholder="Enter mission name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Drone ID</mat-label>
+        <input matInput [(ngModel)]="mission.drone_id" placeholder="Enter Drone ID" />
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Start Time</mat-label>
+        <input matInput [(ngModel)]="mission.start_time" [matDatepicker]="picker" placeholder="Select start time">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>End Time</mat-label>
+        <input matInput [(ngModel)]="mission.end_time" [matDatepicker]="picker2" placeholder="Select end time">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Status</mat-label>
+        <mat-select [(ngModel)]="mission.Status" >
+            <mat-option value="pending">Pending</mat-option>
+            <mat-option value="in-progress">In Progress</mat-option>
+            <mat-option value="completed">Completed</mat-option>
+            <mat-option value="failed">Failed</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div class="survey-area">
+        <h4>Survey Area Coordinates</h4>
+        <label for="latitude">Latitude</label>
+        <input id="latitude" [(ngModel)]="mission.survey_area.lat" type="number" placeholder="Enter Latitude">
+        <label for="longitude">Longitude</label>
+        <input id="longitude" [(ngModel)]="mission.survey_area.lon" type="number" placeholder="Enter Longitude">
+    </div>
+
+
+
+    <button mat-raised-button (click)="onCreateMission()">Create Mission</button>
+</div>

@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="toggleSidebar()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Drone Survey Management</span>
+  <span class="spacer"></span>
+  <div class="nav-right">
+    <mat-icon class="profile-icon" (click)="toggleMenu()">account_circle</mat-icon>
+
+    <div *ngIf="menuOpen" class="dropdown-menu">
+      <a disabled>👤Sneha</a>
+      <a (click)="goToSettings()">⚙️ Settings</a>
+      <a (click)="logout()">🚪Logout</a>
+    </div>
+  </div>
+</mat-toolbar>

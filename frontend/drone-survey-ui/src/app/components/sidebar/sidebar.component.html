@@ -1,0 +1,24 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard">
+        <mat-icon>dashboard</mat-icon> Dashboard
+      </a>
+      <a mat-list-item routerLink="/missions">
+        <mat-icon>flight</mat-icon> Missions
+      </a>
+      <a mat-list-item routerLink="/drones">
+        <mat-icon>airplanemode_active</mat-icon> Drones
+      </a>
+      <a mat-list-item routerLink="/reports">
+        <mat-icon>assessment</mat-icon> Reports
+      </a>
+      <a mat-list-item routerLink="/settings">
+        <mat-icon>settings</mat-icon> Settings
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

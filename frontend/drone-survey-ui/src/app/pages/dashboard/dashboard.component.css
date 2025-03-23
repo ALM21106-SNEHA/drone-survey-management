@@ -1,0 +1,107 @@
+/* Ensure the body and html take up full viewport height */
+html, body {
+  height: 100%; /* Full height of the viewport */
+  margin: 0; /* Remove any default margin */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent page scroll on body */
+}
+
+/* Main Dashboard Container */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow the container to grow and take remaining space */
+  overflow-y: auto; /* Scrollbar only for dashboard content */
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 50px; /* Ensure space for footer */
+  min-height: 0; /* Allow it to shrink to fit */
+}
+
+/* Header */
+.dashboard-container h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Stats Cards - In a row */
+.dashboard-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* Each Stat Card */
+.dashboard-card {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+/* Main content (Map and Table) in a row */
+.dashboard-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-grow: 1;
+  margin-bottom: 16px;
+}
+
+/* Live Map and Table View */
+.dashboard-map,
+.dashboard-table {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Drone Battery Section */
+.dashboard-battery {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+}
+
+/* Progress bars for battery levels */
+mat-progress-bar {
+  width: 100%;
+}
+
+/* Footer Style */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  z-index: 10; /* Ensures the footer stays above other content */
+}
+
+/* Make sure the dashboard container scrolls */
+.dashboard-container {
+  overflow-y: auto;
+  flex-grow: 1; /* Allow it to grow and take remaining space */
+  padding-bottom: 50px; /* Add padding to prevent footer from overlapping */
+  height: calc(100vh - 50px); /* Adjust this height if needed */
+}

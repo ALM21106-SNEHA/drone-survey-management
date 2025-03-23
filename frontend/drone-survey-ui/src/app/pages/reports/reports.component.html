@@ -1,0 +1,27 @@
+<!-- reports.component.html -->
+<div class="container">
+    <h1>Drone Reports</h1>
+  
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let column of columns">{{ column }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let drone of drones">
+          <td>{{ drone.id }}</td>
+          <td>{{ drone.name }}</td>
+          <td>{{ drone.model }}</td>
+          <td>{{ drone.status }}</td>
+          <td>{{ drone.battery }}%</td>
+          <td>{{ drone.altitude }}m</td>
+          <td>{{ drone.speed }} km/h</td>
+          <td>{{ drone.latitude }}, {{ drone.longitude }}</td>
+          <td>{{ drone.lastUpdated }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  

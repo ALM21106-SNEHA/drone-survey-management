@@ -1,0 +1,43 @@
+<div class="table-container">
+    <h3>Drone Data</h3>
+    <table mat-table [dataSource]="drones" class="mat-elevation-z8">
+  
+      <!-- Drone ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Drone ID </th>
+        <td mat-cell *matCellDef="let drone"> {{drone.id}} </td>
+      </ng-container>
+  
+      <!-- Status Column -->
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let drone"> {{drone.status}} </td>
+      </ng-container>
+  
+      <!-- Location Column -->
+      <ng-container matColumnDef="location">
+        <th mat-header-cell *matHeaderCellDef> Location </th>
+        <td mat-cell *matCellDef="let drone"> {{drone.location}} </td>
+      </ng-container>
+  
+      <!-- Battery Column -->
+      <ng-container matColumnDef="battery">
+        <th mat-header-cell *matHeaderCellDef> Battery </th>
+        <td mat-cell *matCellDef="let drone"> {{drone.battery}}% </td>
+      </ng-container>
+  
+      <!-- Action Column -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let drone">
+          <button mat-raised-button (click)="trackDrone(drone.id)">Track</button>
+        </td>
+      </ng-container>
+  
+      <!-- Header and Row Definitions -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+    </table>
+  </div>
+  

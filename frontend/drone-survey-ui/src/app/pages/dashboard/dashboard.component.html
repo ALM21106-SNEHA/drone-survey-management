@@ -1,0 +1,53 @@
+<div class="dashboard-container">
+  <h2>Drone Survey Dashboard</h2>
+  
+  <!-- Stats Cards -->
+  <div class="dashboard-cards">
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-icon>flight_takeoff</mat-icon>
+        <mat-card-title>Total Missions</mat-card-title>
+      </mat-card-header>
+      <mat-card-content><h3>15</h3></mat-card-content>
+    </mat-card>
+
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-icon>airplanemode_active</mat-icon>
+        <mat-card-title>Active Drones</mat-card-title>
+      </mat-card-header>
+      <mat-card-content><h3>7</h3></mat-card-content>
+    </mat-card>
+
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-icon>assessment</mat-icon>
+        <mat-card-title>Reports Generated</mat-card-title>
+      </mat-card-header>
+      <mat-card-content><h3>25</h3></mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Main Dashboard Content -->
+  <div class="dashboard-main">
+    <!-- Live Map -->
+    <div class="dashboard-map">
+      <h3>Live Drone Locations</h3>
+      <app-map-view></app-map-view>
+    </div>
+
+    <!-- Recent Missions -->
+    <div class="dashboard-table">
+      <h3>Recent Missions</h3>
+      <app-table-view></app-table-view>
+    </div>
+  </div>
+
+  <!-- Drone Battery Status -->
+  <div class="dashboard-battery">
+    <h3>Drone Battery Levels</h3>
+    <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+    <mat-progress-bar mode="determinate" value="65"></mat-progress-bar>
+    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+  </div>
+</div> 

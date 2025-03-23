@@ -1,0 +1,49 @@
+/* Map container and image styling */
+.map-container {
+    position: relative;
+    width: 600px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+}
+
+.india-map {
+    width: 71%;
+    height: 87%;
+    object-fit: contain;
+}
+
+/* Marker styling */
+.marker {
+    position: absolute;
+    font-size: 24px;
+    color: red;
+    transform: translate(-50%, -50%); /* Centers the icon */
+    cursor: pointer;
+}
+
+.drone-icon {
+    font-size: 36px; /* Adjust the icon size */
+}
+
+/* Legend styling inside the map container */
+.legend {
+    position: absolute;
+    top: 10px;
+    right: 202px;
+    background: rgba(255, 255, 255, 0.7); /* Optional background for better visibility */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+    font-size: 14px;
+    color: #000; /* Text color */
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+}
+
+.legend-icon {
+    font-size: 20px;
+    color: red; /* Adjust color for legend icon */
+    margin-right: 10px;
+}

@@ -1,0 +1,51 @@
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    min-width: 1200px; /* Ensure table has enough space */
+    border-collapse: collapse;
+}
+
+/* Header styles */
+th {
+    position: sticky;
+    top: 0;
+    background: #004080; /* Darker blue for better visibility */
+    color: black; /* Ensure text is visible */
+    text-align: left;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Header hover effect */
+th:hover {
+    background: #0056b3; /* Slightly darker on hover */
+    color: white;
+}
+
+/* Table data styles */
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Row hover effect */
+tr:hover td {
+    background-color: #f5f5f5;
+}
+
+/* Alternate row color for better readability */
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}

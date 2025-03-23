@@ -1,0 +1,62 @@
+/* settings.component.css */
+.settings-container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .settings-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    font-weight: 600;
+  }
+  
+  select, input[type="checkbox"] {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .save-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .save-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .settings-container {
+      width: 90%;
+    }
+    .settings-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
